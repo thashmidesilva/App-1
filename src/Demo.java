@@ -1,4 +1,5 @@
 import org.hibernate.Session;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -11,7 +12,7 @@ public class Demo {
         //interface
         SessionFactory sessionFactory= configuration.buildSessionFactory();
         //interface
-        Session session=SessionFactory.openSession();
+        Session session=sessionFactory.openSession();
         session.save(student);
     }
 }
